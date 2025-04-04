@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>გვერდი 1 - Telegram Clicker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🎯 დავალებები</h1>
+        <p class="subtitle">შეასრულე დავალებები და მიიღე დამატებითი ქულები!</p>
+        
+        <div class="current-points">
+            <span>შენი ქულები:</span>
+            <span id="reward-points">0</span>
+        </div>
+        
+        <div class="quests-container">
+            <!-- იუთუბის გამოწერა -->
+            <div class="quest-card" id="youtube-quest">
+                <div class="quest-info">
+                    <h3>YouTube გამოწერა</h3>
+                    <p>გამოიწერე ჩვენი არხი YouTube-ზე</p>
+                    <span class="quest-reward">+50 ქულა</span>
+                </div>
+                <button class="quest-button" onclick="completeQuest('youtube')">დასრულებული</button>
+            </div>
+            
+            <!-- ტელეგრამის არხი -->
+            <div class="quest-card" id="telegram-quest">
+                <div class="quest-info">
+                    <h3>Telegram არხი</h3>
+                    <p>შეუერთდი ჩვენს ტელეგრამ არხს</p>
+                    <span class="quest-reward">+30 ქულა</span>
+                </div>
+                <button class="quest-button" onclick="completeQuest('telegram')">დასრულებული</button>
+            </div>
+            
+            <!-- ტვიტერის გამოწერა -->
+            <div class="quest-card" id="twitter-quest">
+                <div class="quest-info">
+                    <h3>Twitter გამოწერა</h3>
+                    <p>გამოიწერე ჩვენი Twitter გვერდი</p>
+                    <span class="quest-reward">+20 ქულა</span>
+                </div>
+                <button class="quest-button" onclick="completeQuest('twitter')">დასრულებული</button>
+            </div>
+            
+            <!-- ყოველდღიური ვიზიტი -->
+            <div class="quest-card" id="daily-quest">
+                <div class="quest-info">
+                    <h3>ყოველდღიური ვიზიტი</h3>
+                    <p>ეწვიე თამაშს ყოველდღე</p>
+                    <span class="quest-reward">+10 ქულა</span>
+                </div>
+                <button class="quest-button" onclick="completeQuest('daily')">დასრულებული</button>
+            </div>
+        
+   
+
+    
+            <footer class="page-footer">
+                <div class="footer-images">
+                    <a href="index.html" class="footer-link">
+                        <img src="assets/images/page0.png" alt="გვერდი 1" class="footer-image">
+                    </a>
+                    <a href="page1.html" class="footer-link">
+                        <img src="assets/images/page1.png" alt="გვერდი 2" class="footer-image">
+                    </a>
+                    <a href="page2.html" class="footer-link">
+                        <img src="assets/images/page2.png" alt="გვერდი 3" class="footer-image">
+                    </a>
+                    <a href="page3.html" class="footer-link">
+                        <img src="assets/images/page3.png" alt="გვერდი 4" class="footer-image">
+                    </a>
+                </div>
+            </footer>
+        
+        <!-- დაამატეთ ეს script ტეგები -->
+        <script src="js/game.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/sound.js"></script>
+        <script src="js/rewards.js"></script>
+        
+        <!-- გააკეთეთ ფუნქციები გლობალურად ხელმისაწვდომი -->
+        <script>
+            // გავაკეთოთ ძირითადი ფუნქციები ხელმისაწვდომი სხვა ფაილებისთვის
+            window.addPoints = addPoints;
+            window.completeQuest = completeQuest;
+            window.gameState = gameState;
+        </script>
+</body>
+</html>
